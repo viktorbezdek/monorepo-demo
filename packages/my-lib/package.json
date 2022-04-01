@@ -1,0 +1,31 @@
+{
+  "name": "my-lib",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Viktor Bezdek <viktor.bezdek@toptal.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/my-lib.js",
+  "type": "module",
+  "source": "lib/my-lib.js",
+  "exports": {
+    "require": "./dist/my-lib.cjs",
+    "default": "./dist/my-lib.modern.js"
+  },
+  "module": "./dist/my-lib.module.js",
+  "unpkg": "./dist/my-lib.umd.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle -o dist"
+  },
+  "devDependencies": {
+    "microbundle": "^0.14.2"
+  }
+}
